@@ -1,7 +1,7 @@
 .app {
   /* background-image: url("./weather/day2.jpg"); */
   background-size: cover;
-  background-color: #8a2be2;
+  background-color: #bb9dd8;
   height: 100vh;
   opacity: 0.9;
   color: white;
@@ -10,17 +10,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 5px;
+  margin-right: 5 px;
   /* background-color: blue; */
 }
 .app-name {
   font-family: fantasy;
   font-size: 35px;
-  /* color: springgreen; */
-  background: linear-gradient(to right,springgreen, yellow, orange, lavender);
+  color: lavender;
+  /* background: linear-gradient(to right,springgreen, yellow, orange, lavender);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
   transition: ease;
   display: inline;
   margin-top: 5px;
@@ -42,15 +42,15 @@
 .search-btn {
   width: 17%;
   height: 34px;
-  border: 1px solid rgb(175, 50, 50);
-  background-color: rgb(202, 60, 60);
-  color: lavender;
+  border: 1px solid lavender;
+  background-color: rgb(226, 255, 227);
+  color: navy;
   font-weight: 600;
   margin-left: 2px;
   border-radius: 20px;
 }
 .search-btn:hover {
-  background-color: navy;
+  background-color: red;
 }
 .top {
   display: flex;
@@ -73,10 +73,13 @@
 .icon-img {
   width: 90px;
   height: 90px;
+  border: 1px solid lavender;
+  border-radius: 50%;
 }
 .temperature {
   font-size: 70px;
   color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 .city {
   font-size: 25px;
@@ -98,9 +101,9 @@
   margin-top: 1px;
   margin-left: 20px;
   margin-right: 20px;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(30px);
   overflow: auto;
-  color: gold;
+  color: rgb(226, 255, 227);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -126,7 +129,7 @@
   text-align: center;
   margin-top: 0px;
   margin-right: 10px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: cursive;
 }
 

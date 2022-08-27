@@ -92,9 +92,9 @@ export default function Start() {
           <p className="description">
             {data.main ? data.weather[0].description : "search city"}
           </p>
-          <p className="description">
+          {/* <p className="description">
             {data.main ? day : "search city"}
-          </p>
+          </p> */}
           <p className="description">
             Max:{" "}
             {data.main

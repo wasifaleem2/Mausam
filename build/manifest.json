@@ -1,6 +1,6 @@
 {
-  "short_name": "Mausam Web",
-  "name": "Mausam Weather Web",
+  "short_name": "Mausam",
+  "name": "WA Weather Web",
   "icons": [
     {
       "src": "favicon.png",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "rgb(57, 169, 197)",
+  "theme_color": "rebeccapurple",
   "background_color": "#FFFFFF"
 }
