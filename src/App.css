@@ -115,14 +115,14 @@
 .single {
   margin-bottom: 5px;
 }
-.credits-box {
+/* .credits-box {
   width: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
-}
+} */
 .credits {
   text-align: center;
   color: white;
