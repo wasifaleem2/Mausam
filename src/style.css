@@ -112,7 +112,7 @@
     "Lucida Sans", Arial, sans-serif;
 }
 .bubble{
-  /* backdrop-filter: blur(1px); */
+  backdrop-filter: blur(10px);
   margin: 10px;
   border: 1px solid white;
   border-radius: 10px;
