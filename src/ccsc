@@ -1,0 +1,145 @@
+.app {
+  /* background-image: url("./weather/day2.jpg"); */
+  background-size: cover;
+  background-color: #bb9dd8;
+  height: 100vh;
+  opacity: 0.9;
+  color: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  /* background-color: blue; */
+}
+.app-name {
+  font-family: fantasy;
+  font-size: 35px;
+  color: lavender;
+  /* background: linear-gradient(to right,springgreen, yellow, orange, lavender);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+  transition: ease;
+  display: inline;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 520px) {
+  .app-name {
+    margin-right: 100px;
+  }
+}
+.search {
+  width: 45%;
+  height: 35px;
+  border: 1px solid lavender;
+  display: inline;
+  border-radius: 20px;
+  float: right;
+}
+.search-btn {
+  width: 17%;
+  height: 34px;
+  border: 1px solid lavender;
+  background-color: rgb(226, 255, 227);
+  color: navy;
+  font-weight: 600;
+  margin-left: 2px;
+  border-radius: 20px;
+}
+.search-btn:hover {
+  background-color: red;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 30px;
+  max-height: 100vh;
+  height: 40vh;
+  /* overflow: auto; */
+  max-width: auto;
+  /* color: black; */
+}
+.left {
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+.icon-img {
+  width: 90px;
+  height: 90px;
+  /* border: 1px solid lavender;
+  border-radius: 50%; */
+}
+.temperature {
+  font-size: 70px;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.city {
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+.description {
+  font-size: 20px;
+  font-style: italic;
+  margin-top: -5px;
+  font-weight: 500;
+}
+.details-box {
+  text-align: center;
+  /* background-color: rgb(228, 228, 252); */
+  border: 2px solid whitesmoke;
+  box-shadow: 1px 1px rgb(163, 163, 163);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  backdrop-filter: blur(30px);
+  overflow: auto;
+  color: rgb(226, 255, 227);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.detail {
+  color: white;
+  font-weight: 800;
+}
+
+.single {
+  margin-bottom: 5px;
+}
+/* .credits-box {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+} */
+.credits {
+  text-align: center;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-family: cursive;
+}
+
+::-webkit-scrollbar-track {
+  background-color: blue;
+}
+::-webkit-scrollbar-thumb {
+  background-color: skyblue;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: navy;
+}

@@ -1,0 +1,144 @@
+.app {
+  /* background-image: url("./weather/day.jpg"); */
+  background-size: cover;
+  background-color: #bb9dd8;
+  min-height: 100vh;
+  opacity: 0.9;
+  color: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  /* background-color: blue; */
+}
+.app-name {
+  font-family: fantasy;
+  font-size: 35px;
+  color: lavender;
+  /* background: linear-gradient(to right,springgreen, yellow, orange, lavender);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+  transition: ease;
+  display: inline;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+@media only screen and (min-width: 520px) {
+  .app-name {
+    margin-right: 100px;
+  }
+}
+.search {
+  width: 50%;
+  height: 35px;
+  border: 1px solid lavender;
+  display: inline;
+  border-radius: 10px;
+  float: right;
+}
+.search-btn {
+  width: 10%;
+  height: 34px;
+  border: 1px solid lavender;
+  background-color: rgb(226, 255, 227);
+  color: navy;
+  font-weight: 600;
+  margin-left: 2px;
+  border-radius: 10px;
+}
+.search-btn:hover {
+  background-color: red;
+}
+.top {
+  margin-top: 7%;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.detail-top{
+  font-size: 30px !important;
+}
+@media only screen and (max-width: 450px) {
+  .top {
+    margin-top: 20%;
+  }
+  .detail-top{
+    font-size: 20px !important;
+  }
+}
+
+.icon-img {
+  width: 90px;
+  height: 90px;
+  /* border: 1px solid lavender;
+    border-radius: 50%; */
+}
+.temp {
+  font-size: 90px;
+}
+.city {
+  font-size: 25px;
+}
+.left {
+  width: 50%;
+}
+.right {
+  width: 50%;
+}
+.detail-top {
+  font-size: 20px;
+}
+.details-box {
+  margin-top: 30px;
+  text-align: center;
+  text-align: center;
+  /* border: 2px solid whitesmoke;
+  box-shadow: 1px 1px rgb(163, 163, 163);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  backdrop-filter: blur(30px);
+  overflow: auto;
+  color: rgb(226, 255, 227); */
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.bubble{
+  /* backdrop-filter: blur(1px); */
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.bubble:hover{
+    /* backdrop-filter: blur(1px); */
+  background-color: skyblue;
+  opacity: 0.9;
+  /* color: black; */
+}
+.icons{
+  margin-top: 2px;
+  color: whitesmoke;
+}
+/* .icons:hover{
+  color: black;
+} */
+.detail{
+  /* font-size: 30px; */
+}
+.credits {
+  text-align: center;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 10px;
+  font-size: 12px;
+  font-family: cursive;
+}

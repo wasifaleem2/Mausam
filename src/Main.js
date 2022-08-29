@@ -1,4 +1,4 @@
-import "./App.css";
+import "./style.css";
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -6,12 +6,21 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Day from "./weather/day.jpg";
 import Night from "./weather/night.jpg";
+import { FcSearch } from 'react-icons/fc';
+import { FaTemperatureHigh } from 'react-icons/fa';
+import { GiSunrise } from 'react-icons/gi';
+import { FiWind } from 'react-icons/fi';
+import { WiHumidity  } from 'react-icons/wi';
+import { BsCloudsFill, BsFillSunsetFill  } from 'react-icons/bs';
+import { MdVisibility, MdCompress  } from 'react-icons/md';
 
-// //old version
-// //old version
 
 
-export default function Start() {
+
+
+
+
+export default function Main() {
   const [background, setBackground] = useState();
   const [data, setData] = useState({});
   const [icon, setIcon] = useState("");
@@ -42,10 +51,10 @@ export default function Start() {
         // console.log("last", response.data.weather[0].icon.slice(-1));
         if (response.data.weather[0].icon.slice(-1) == "d") {
           setBackground(Day);
-          setDay("Day")
+          setDay("Day");
         } else if (response.data.weather[0].icon.slice(-1) == "n") {
           setBackground(Night);
-          setDay("Night")
+          setDay("Night");
         }
       } catch (error) {
         console.log(error);
@@ -57,7 +66,7 @@ export default function Start() {
   }, []);
 
   return (
-    <div className="app" style={{ backgroundImage: `url(${background})` }}>
+    <div className="app"  style={{ backgroundImage: `url(${background})` }}>
       <div className="header">
         <h3 className="app-name">MAUSAM</h3>
         <input
@@ -69,48 +78,34 @@ export default function Start() {
           onKeyPress={() => getWeather}
         />
         <button className="search-btn" onClick={() => getWeather()}>
-          Search
+          <FcSearch size={20}/>
         </button>
       </div>
       {/* Header ends */}
+
       <div className="top">
-        <div className="left">
+        <div className="right">
           <img
             className="icon-img"
             src={`http://openweathermap.org/img/w/${icon}.png`}
             alt="icon"
           />
-          <h1 className="temperature">
-            {data.main
+          <h1 className="temp">{data.main
               ? (data.main.temp - 273).toFixed() + "\u00B0" + "C"
-              : null}
-          </h1>
-          <p className="city">
-            {data.main ? data.name : "search city"},{" "}
-            {data.main ? data.sys.country : ""}
-          </p>
-          {/* <p>Last Updated {data.main ? timeConverter(data.dt) : "---"}</p> */}
+              : null}</h1>
+          <p className="city">{data.main ? data.name : "search city"},{" "}
+            {data.main ? data.sys.country : ""}</p>
         </div>
-        <div className="right">
-          
-          <p className="description">
-            {data.main ? data.weather[0].description : "search city"}
-          </p>
-          {/* <p className="description">
-            {data.main ? day : "search city"}
-          </p> */}
-          <p className="description">
-            Max:{" "}
+        <div className="left">
+          <p className="detail-top">{data.main ? data.weather[0].description : "search city"}</p>
+          <p className="detail-top">Max:{" "}
             {data.main
               ? (data.main.temp_max - 273).toFixed() + "\u00B0" + "C"
-              : "---"}
-          </p>
-          <p className="description">
-            Min:{" "}
+              : "---"}</p>
+          <p className="detail-top">Min:{" "}
             {data.main
               ? (data.main.temp_min - 273).toFixed() + "\u00B0" + "C"
-              : "---"}
-          </p>
+              : "---"}</p>
         </div>
       </div>
 
@@ -118,7 +113,8 @@ export default function Start() {
         <Container className="overflow-auto">
           <Row>
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+              <FaTemperatureHigh className="icons" size={50}/>
                 <h4>Feels Like</h4>
                 <p className="detail">
                   {data.main
@@ -128,7 +124,8 @@ export default function Start() {
               </div>
             </Col>
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+                <WiHumidity className="icons" size={50}/>
                 <h4>Humidity</h4>
                 <p className="detail">
                   {data.main ? data.main.humidity + "%" : "---"}
@@ -137,7 +134,8 @@ export default function Start() {
             </Col>
 
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+                <MdCompress className="icons" size={50}/>
                 <h4>Pressure</h4>
                 <p className="detail">
                   {data.main ? data.main.pressure + " mb" : "---"}
@@ -145,7 +143,8 @@ export default function Start() {
               </div>
             </Col>
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+                <FiWind className="icons" size={50}/>
                 <h4>Wind Speed</h4>
                 <p className="detail">
                   {data.main ? data.wind.speed + " m/s" : "---"}
@@ -153,7 +152,8 @@ export default function Start() {
               </div>
             </Col>
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+                <MdVisibility className="icons" size={50}/>
                 <h4>Visibility</h4>
                 <p className="detail">
                   {data.main ? data.visibility / 1000 + " KM" : "---"}
@@ -161,7 +161,8 @@ export default function Start() {
               </div>
             </Col>
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+                <BsCloudsFill className="icons" size={50}/>
                 <h4>Clouds</h4>
                 <p className="detail">
                   {data.main ? data.clouds.all + " %" : "---"}
@@ -169,15 +170,16 @@ export default function Start() {
               </div>
             </Col>
             <Col xs={6} md={4}>
-              <div>
-                <h4>Sunrise</h4>
+              <div className="bubble">
+              <GiSunrise className="icons" size={50}/><h4>Sunrise</h4>
                 <p className="detail">
                   {data.main ? timeConverter(data.sys.sunrise) + " AM" : "---"}
                 </p>
               </div>
             </Col>
             <Col xs={6} md={4}>
-              <div>
+              <div className="bubble">
+                <BsFillSunsetFill className="icons" size={50}/>
                 <h4>Sunset</h4>
                 <p className="detail">
                   {data.main ? timeConverter(data.sys.sunset) + " PM" : "---"}
